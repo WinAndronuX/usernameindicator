@@ -1,0 +1,9 @@
+{
+  "name": "User Name Indicator",
+  "description": "Shows user, host or session name indicator in the Quick Settings area of the top panel.",
+  "uuid": "usernameindicator@winandronux.github.com",
+  "settings-schema": "org.gnome.shell.extensions.usernameindicator",
+  "gettext-domain": "usernameindicator",
+  "shell-version": ["50"],
+  "url": "https://github.com/WinAndronuX/usernameindicator"
+}

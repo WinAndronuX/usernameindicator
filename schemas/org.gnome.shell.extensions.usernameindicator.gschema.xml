@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schemalist>
+  <schema
+        id="org.gnome.shell.extensions.usernameindicator"
+        path="/org/gnome/shell/extensions/usernameindicator/"
+    >
+    <key name="indicator-type" type="i">
+      <default>1</default>
+      <summary>Indicator type</summary>
+      <description
+            >0: Real Name, 1: User Name, 2: Host Name, 3: Session Name, 4: Custom</description>
+    </key>
+    <key name="custom-format" type="s">
+      <default>'{user_name}@{host_name}'</default>
+      <summary>Custom format</summary>
+      <description
+            >Custom format for the indicator. Variables: {real_name}, {user_name}, {host_name}</description>
+    </key>
+  </schema>
+</schemalist>

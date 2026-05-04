@@ -1,0 +1,17 @@
+# GNOME Shell Extension compiled files
+schemas/gschemas.compiled
+locale/
+*.mo
+
+# Common temporary files
+*~
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE folders
+.vscode/
+.idea/
