@@ -24,26 +24,51 @@ export default class AppNameIndicator extends Extension {
 
     // Add to QuickSettingsMenu
     const QuickSettingsMenu = Main.panel.statusArea.quickSettings;
+    if (QuickSettingsMenu && QuickSettingsMenu._indicators) {
+      QuickSettingsMenu._indicators.insert_child_at_index(this._box, 0);
+    }
 
-    QuickSettingsMenu._indicators.insert_child_at_index(this._box, 0);
-
-    this._settings.connect("changed::indicator-type", () =>
+    this._changedId1 = this._settings.connect("changed::indicator-type", () =>
       this._updateLabel(),
     );
-    this._settings.connect("changed::custom-format", () => this._updateLabel());
+    this._changedId2 = this._settings.connect("changed::custom-format", () =>
+      this._updateLabel(),
+    );
 
     this._updateLabel();
   }
 
   disable() {
+    if (this._changedId1) {
+      this._settings.disconnect(this._changedId1);
+      this._changedId1 = null;
+    }
+    if (this._changedId2) {
+      this._settings.disconnect(this._changedId2);
+      this._changedId2 = null;
+    }
+
     const QuickSettingsMenu = Main.panel.statusArea.quickSettings;
-    QuickSettingsMenu._indicators.remove_child(this._box);
-    this._box = null;
-    this._label = null;
+    if (QuickSettingsMenu && QuickSettingsMenu._indicators && this._box) {
+      QuickSettingsMenu._indicators.remove_child(this._box);
+    }
+
+    if (this._box) {
+      this._box.destroy();
+      this._box = null;
+    }
+
+    if (this._label) {
+      this._label.destroy();
+      this._label = null;
+    }
+
     this._settings = null;
   }
 
   _updateLabel() {
+    if (!this._label) return;
+
     const type = this._settings.get_int("indicator-type");
     const customFormat = this._settings.get_string("custom-format");
 

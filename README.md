@@ -13,11 +13,11 @@ A GNOME Shell extension that adds a customizable user, host, or session indicato
   - User Name (`GLib.get_user_name`)
   - Host Name (`GLib.get_host_name`)
   - Session Info (`user@host`)
-- **Custom Format**: Create your own display format using variables:
+  - **Custom Format**: Create your own display format using variables:
   - `{real_name}`
   - `{user_name}`
   - `{host_name}`
-  - `{session_name}`
+  - `{session_name}` (defaults to `user@host`)
 - **Quick Settings Integration**: Neatly placed at the start of the Quick Settings indicators.
 
 ## Screenshots

@@ -26,8 +26,8 @@ msgstr "Nombre de Usuario"
 msgid "Host Name"
 msgstr "Nombre del Host"
 
-msgid "Session (User @ Host)"
-msgstr "Sesión (Usuario @ Host)"
+msgid "Session (User@Host)"
+msgstr "Sesión (Usuario@Host)"
 
 msgid "Custom"
 msgstr "Personalizado"
