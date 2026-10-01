@@ -4,7 +4,7 @@
   "uuid": "usernameindicator@winandronux.github.com",
   "settings-schema": "org.gnome.shell.extensions.usernameindicator",
   "gettext-domain": "usernameindicator",
-  "shell-version": ["50"],
+  "shell-version": ["50", "51"],
   "url": "https://github.com/WinAndronuX/usernameindicator",
   "version": 2
 }
