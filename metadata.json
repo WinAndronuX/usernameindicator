@@ -6,5 +6,5 @@
   "gettext-domain": "usernameindicator",
   "shell-version": ["50", "51"],
   "url": "https://github.com/WinAndronuX/usernameindicator",
-  "version": 3
+  "version": 4
 }

@@ -53,14 +53,14 @@ export default class AppNameIndicator extends Extension {
       QuickSettingsMenu._indicators.remove_child(this._box);
     }
 
-    if (this._box) {
-      this._box.destroy();
-      this._box = null;
-    }
-
     if (this._label) {
       this._label.destroy();
       this._label = null;
+    }
+
+    if (this._box) {
+      this._box.destroy();
+      this._box = null;
     }
 
     this._settings = null;
